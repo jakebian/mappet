@@ -22,6 +22,7 @@
 
 ##submap
 > a category describing a class of objects, e.g., a submap of waterfountains
+
 ###fields
 + name
 + description
