@@ -11,7 +11,15 @@
 |
 */
 
+/*-----------------USER-----------------*/
+Route::get('user/activate/{id}', 'UserController@getActivateUser');
+Route::controller('user', 'UserController');
+
+Route::resource('place', 'PlaceController');
+Route::resource('submap', 'SubmapController');
+
+/*-----------------HOME-----------------*/
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('home.main');
 });

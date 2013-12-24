@@ -9,16 +9,16 @@
 + latitude
 + longitude
 + score (user rating)
-
-###has many
-+ part_of (submap)
-+ visited_by (user)
-+ updated_by (user)
-
-###has one
-+ created_by (user)
 + created_on (date)
 + updated_on (date)
+
+###many to one
+* created_by (user)
+---later + updated_by (user)
+* part_of (submap)
+
+###many-to-many
+* visited_by (user)
 
 ##submap
 > a category describing a class of objects, e.g., a submap of waterfountains
@@ -26,14 +26,12 @@
 ###fields
 + name
 + description
-
-###has many
-+ instance (place)
-
-###has one
-+ created_by (user)
 + created_on (date)
 + updated_on (date)
+
+###many to one
++ created_by (user)
+
 
 ##user
 user table is provided by Sentry 2
